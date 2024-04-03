@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Начало выполнения pipeline'
             }
-            
+        }    
         stage('Checkout') {
             steps {
                 checkout scm
@@ -22,7 +22,6 @@ pipeline {
         stage('Start Application') {
             steps {
                 sh "yarn start"
-                }
             }
         }
     }
