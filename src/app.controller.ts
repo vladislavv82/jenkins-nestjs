@@ -14,4 +14,9 @@ export class AppController {
   getEnd(): string {
     return this.appService.getEnd();
   }
+
+  // @Get()
+  // getEnd(): string {
+  //   return this.appService.getEnd();
+  // }
 }
