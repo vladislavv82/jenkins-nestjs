@@ -15,13 +15,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh yarn"
+                sh "yarn"
             }
         }
 
         stage('Start Application') {
             steps {
-                sh yarn start"
+                sh "yarn start"
                 }
             }
         }
