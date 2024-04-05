@@ -2,12 +2,6 @@ pipeline {
     agent any
     
     stages {
-        stage('Initial') {
-            steps {
-                sh "npm install -g yarn"
-                sh "yarn install"
-            }
-        }  
         
         stage('Echo Notification') {
             steps {
