@@ -1,6 +1,7 @@
 pipeline {
-    agent any
-
+    agent {
+        docker { image 'node:20.11.1-alpine3.19' }
+    }
     tools {nodejs 'nodejs jenkins'}
     
     stages {
@@ -14,6 +15,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh "yarn"
+                sh "docker --version"
                 sh "nest --version"
 
             }
