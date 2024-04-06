@@ -15,6 +15,8 @@ pipeline {
             steps {
                 sh "yarn"
                 sh "docker --version"
+                sh "nest --version"
+
             }
         }
 
