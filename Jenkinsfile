@@ -20,9 +20,7 @@ pipeline {
 
         stage('Build docker image') {
             steps{
-                dir('lesson-1') {
-                    sh 'docker build -t nest-js/jenkins-images:latest .'
-                }
+                sh 'docker build -t nest-js/jenkins-images:latest .'
             }
         }
         
