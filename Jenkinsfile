@@ -1,5 +1,7 @@
 pipeline {
     agent any
+
+    tools {nodejs 'nodejs jenkins'}
     
     stages {
         
