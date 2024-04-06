@@ -14,7 +14,6 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh "yarn"
-                sh "docker --version"
                 sh "nest --version"
 
             }
