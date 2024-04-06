@@ -14,6 +14,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh "yarn"
+                sh "docker --version"
             }
         }
 
@@ -22,5 +23,12 @@ pipeline {
                 sh "yarn start:dev"
             }
         }
+        
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    docker.build('my-node-app')
+                }
+            }
     }
 }
