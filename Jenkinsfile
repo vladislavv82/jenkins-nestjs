@@ -9,7 +9,28 @@ pipeline {
             steps {
                 echo 'Начало выполнения pipeline 🚀'
             }
-        }    
+        }
+
+        stage('Docker version') {
+            steps {
+                sh "echo $USER"
+                sh 'docker version'
+            }
+        }
+        
+        stage('Delete workspace before build starts') {
+            steps {
+                echo 'Deleting workspace'
+                deleteDir()
+            }
+        }
+        
+        stage('Checkout') {
+            steps{
+                git branch: 'main',
+                    url: 'https://github.com/bakavets/docker-lessons.git'        
+                }
+        }
 
         stage('Install Dependencies') {
             steps {
