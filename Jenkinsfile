@@ -5,14 +5,9 @@ pipeline {
         
         stage('Echo Notification') {
             steps {
-                echo 'Начало выполнения pipeline'
+                echo 'Начало выполнения pipeline 🚀'
             }
         }    
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
 
         stage('Install Dependencies') {
             steps {
@@ -22,7 +17,7 @@ pipeline {
 
         stage('Start Application') {
             steps {
-                sh "yarn start"
+                sh "yarn start:dev"
             }
         }
     }
