@@ -1,7 +1,10 @@
 pipeline {
     agent any
     
-    tools {nodejs 'nodejs jenkins' , docker 'docker'}
+    tools {
+        nodejs 'nodejs jenkins'
+        docker 'docker'
+    }
     
     stages {
         
