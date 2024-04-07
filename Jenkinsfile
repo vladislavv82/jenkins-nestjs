@@ -15,7 +15,7 @@ pipeline {
 
         stage('Docker version') {
             steps {
-                sh 'docker version'
+                sh 'neofetch'
             }
         }
         
