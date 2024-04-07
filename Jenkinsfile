@@ -3,7 +3,6 @@ pipeline {
     
     tools {
         nodejs 'nodejs jenkins'
-        docker 'docker'
     }
     
     stages {
@@ -30,7 +29,7 @@ pipeline {
         stage('Checkout') {
             steps{
                 git branch: 'main',
-                    url: 'https://github.com/bakavets/docker-lessons.git'        
+                    url: 'https://github.com/vladislavv82/jenkins-nestjs.git'        
                 }
         }
 
